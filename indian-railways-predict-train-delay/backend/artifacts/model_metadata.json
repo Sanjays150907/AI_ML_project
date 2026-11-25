@@ -1,0 +1,647 @@
+{
+  "version": "v1.0-pca-202610121508",
+  "trained_at": "2026-10-12T15:08:26.228447",
+  "sample_size": 50000,
+  "train_size": 40000,
+  "val_size": 10000,
+  "primary_model": {
+    "name": "Random Forest Regressor with PCA (95%)",
+    "type": "RandomForest_PCA",
+    "mae": 37.063,
+    "rmse": 50.276,
+    "r2": 0.4289,
+    "train_time_seconds": 4.95,
+    "is_primary": true
+  },
+  "comparisons": [
+    {
+      "model_name": "Random Forest + PCA",
+      "model_type": "RandomForest_PCA",
+      "has_pca": true,
+      "mae": 37.063,
+      "rmse": 50.276,
+      "r2": 0.4289,
+      "training_time_seconds": 4.95,
+      "retained_components": 21,
+      "is_primary": true
+    },
+    {
+      "model_name": "Random Forest Baseline",
+      "model_type": "RandomForest_Baseline",
+      "has_pca": false,
+      "mae": 35.792,
+      "rmse": 49.375,
+      "r2": 0.4492,
+      "training_time_seconds": 2.61,
+      "retained_components": null,
+      "is_primary": false
+    },
+    {
+      "model_name": "XGBoost Regressor",
+      "model_type": "XGBoost_Benchmark",
+      "has_pca": false,
+      "mae": 35.138,
+      "rmse": 48.144,
+      "r2": 0.4763,
+      "training_time_seconds": 0.53,
+      "retained_components": null,
+      "is_primary": false
+    }
+  ],
+  "pca_analytics": {
+    "n_original_features": 27,
+    "n_components_retained": 21,
+    "variance_threshold": 0.95,
+    "explained_variance_ratio": [
+      0.0957,
+      0.0763,
+      0.0733,
+      0.0632,
+      0.0395,
+      0.0395,
+      0.0393,
+      0.0392,
+      0.0389,
+      0.0388,
+      0.0386,
+      0.0385,
+      0.0384,
+      0.0383,
+      0.0382,
+      0.038,
+      0.0378,
+      0.0377,
+      0.0375,
+      0.0372,
+      0.0329
+    ],
+    "cumulative_variance": [
+      0.0957,
+      0.1719,
+      0.2453,
+      0.3085,
+      0.348,
+      0.3875,
+      0.4268,
+      0.466,
+      0.5049,
+      0.5438,
+      0.5824,
+      0.6209,
+      0.6593,
+      0.6976,
+      0.7358,
+      0.7739,
+      0.8117,
+      0.8494,
+      0.8869,
+      0.9241,
+      0.957
+    ],
+    "feature_names": [
+      "distance_km",
+      "num_scheduled_stops",
+      "scheduled_travel_hours",
+      "departure_hour",
+      "month",
+      "day_of_week",
+      "psr_count",
+      "fog_risk_score",
+      "zone_fog_index",
+      "zone_congestion_index",
+      "season_severity_score",
+      "loco_age_years",
+      "coach_age_years",
+      "maintenance_score",
+      "seat_utilisation_pct",
+      "route_historical_ontime_pct",
+      "track_doubled",
+      "is_hdn_route",
+      "is_electrified",
+      "is_circular_route",
+      "is_monsoon_season",
+      "is_fog_risk",
+      "has_lhb_coaches",
+      "is_rake_shared",
+      "is_overloaded",
+      "late_incoming_rake",
+      "is_special_train"
+    ],
+    "top_loadings": {
+      "PC1": {
+        "is_fog_risk": 0.445,
+        "route_historical_ontime_pct": -0.438,
+        "fog_risk_score": 0.436,
+        "zone_congestion_index": 0.434,
+        "zone_fog_index": 0.427
+      },
+      "PC2": {
+        "distance_km": 0.582,
+        "scheduled_travel_hours": 0.575,
+        "is_monsoon_season": -0.271,
+        "fog_risk_score": 0.265,
+        "is_fog_risk": 0.253
+      },
+      "PC3": {
+        "is_monsoon_season": 0.488,
+        "scheduled_travel_hours": 0.397,
+        "season_severity_score": 0.391,
+        "distance_km": 0.389,
+        "fog_risk_score": -0.259
+      },
+      "PC4": {
+        "season_severity_score": 0.515,
+        "is_monsoon_season": 0.415,
+        "zone_congestion_index": -0.364,
+        "fog_risk_score": 0.331,
+        "is_fog_risk": 0.313
+      },
+      "PC5": {
+        "track_doubled": 0.75,
+        "psr_count": 0.34,
+        "day_of_week": 0.309,
+        "maintenance_score": 0.204,
+        "is_hdn_route": -0.189
+      }
+    }
+  },
+  "actual_vs_predicted": [
+    {
+      "actual": 1.0,
+      "predicted": 106.4
+    },
+    {
+      "actual": 220.0,
+      "predicted": 126.7
+    },
+    {
+      "actual": 14.0,
+      "predicted": 12.4
+    },
+    {
+      "actual": 155.0,
+      "predicted": 46.3
+    },
+    {
+      "actual": 167.0,
+      "predicted": 99.3
+    },
+    {
+      "actual": 85.0,
+      "predicted": 104.1
+    },
+    {
+      "actual": 143.0,
+      "predicted": 113.5
+    },
+    {
+      "actual": 178.0,
+      "predicted": 163.5
+    },
+    {
+      "actual": 12.0,
+      "predicted": 49.1
+    },
+    {
+      "actual": 162.0,
+      "predicted": 135.7
+    },
+    {
+      "actual": 146.0,
+      "predicted": 123.3
+    },
+    {
+      "actual": 100.0,
+      "predicted": 82.0
+    },
+    {
+      "actual": 189.0,
+      "predicted": 138.3
+    },
+    {
+      "actual": 7.0,
+      "predicted": 58.1
+    },
+    {
+      "actual": 8.0,
+      "predicted": 32.2
+    },
+    {
+      "actual": 120.0,
+      "predicted": 114.1
+    },
+    {
+      "actual": 122.0,
+      "predicted": 85.3
+    },
+    {
+      "actual": 102.0,
+      "predicted": 117.7
+    },
+    {
+      "actual": 75.0,
+      "predicted": 122.0
+    },
+    {
+      "actual": 170.0,
+      "predicted": 144.7
+    },
+    {
+      "actual": 93.0,
+      "predicted": 121.1
+    },
+    {
+      "actual": 148.0,
+      "predicted": 164.3
+    },
+    {
+      "actual": 122.0,
+      "predicted": 134.1
+    },
+    {
+      "actual": 108.0,
+      "predicted": 63.5
+    },
+    {
+      "actual": 108.0,
+      "predicted": 105.9
+    },
+    {
+      "actual": 8.0,
+      "predicted": 25.8
+    },
+    {
+      "actual": 14.0,
+      "predicted": 83.0
+    },
+    {
+      "actual": 111.0,
+      "predicted": 134.2
+    },
+    {
+      "actual": 53.0,
+      "predicted": 96.4
+    },
+    {
+      "actual": 88.0,
+      "predicted": 74.8
+    },
+    {
+      "actual": 143.0,
+      "predicted": 144.3
+    },
+    {
+      "actual": 96.0,
+      "predicted": 83.0
+    },
+    {
+      "actual": 140.0,
+      "predicted": 136.5
+    },
+    {
+      "actual": 4.0,
+      "predicted": 18.1
+    },
+    {
+      "actual": 83.0,
+      "predicted": 112.3
+    },
+    {
+      "actual": 3.0,
+      "predicted": 82.2
+    },
+    {
+      "actual": 243.0,
+      "predicted": 134.7
+    },
+    {
+      "actual": 84.0,
+      "predicted": 89.7
+    },
+    {
+      "actual": 109.0,
+      "predicted": 91.3
+    },
+    {
+      "actual": 153.0,
+      "predicted": 166.7
+    },
+    {
+      "actual": 133.0,
+      "predicted": 101.6
+    },
+    {
+      "actual": 192.0,
+      "predicted": 158.7
+    },
+    {
+      "actual": 2.0,
+      "predicted": 15.9
+    },
+    {
+      "actual": 191.0,
+      "predicted": 151.3
+    },
+    {
+      "actual": 4.0,
+      "predicted": 11.7
+    },
+    {
+      "actual": 3.0,
+      "predicted": 41.3
+    },
+    {
+      "actual": 111.0,
+      "predicted": 95.6
+    },
+    {
+      "actual": 61.0,
+      "predicted": 82.1
+    },
+    {
+      "actual": 249.0,
+      "predicted": 95.3
+    },
+    {
+      "actual": 133.0,
+      "predicted": 119.5
+    },
+    {
+      "actual": 115.0,
+      "predicted": 83.1
+    },
+    {
+      "actual": 189.0,
+      "predicted": 142.2
+    },
+    {
+      "actual": 5.0,
+      "predicted": 91.3
+    },
+    {
+      "actual": 100.0,
+      "predicted": 125.3
+    },
+    {
+      "actual": 189.0,
+      "predicted": 88.6
+    },
+    {
+      "actual": 3.0,
+      "predicted": 9.7
+    },
+    {
+      "actual": 3.0,
+      "predicted": 63.4
+    },
+    {
+      "actual": 105.0,
+      "predicted": 130.7
+    },
+    {
+      "actual": 81.0,
+      "predicted": 67.7
+    },
+    {
+      "actual": 230.0,
+      "predicted": 140.6
+    },
+    {
+      "actual": 147.0,
+      "predicted": 132.7
+    },
+    {
+      "actual": 172.0,
+      "predicted": 112.8
+    },
+    {
+      "actual": 135.0,
+      "predicted": 145.5
+    },
+    {
+      "actual": 167.0,
+      "predicted": 77.6
+    },
+    {
+      "actual": 159.0,
+      "predicted": 157.8
+    },
+    {
+      "actual": 191.0,
+      "predicted": 116.8
+    },
+    {
+      "actual": 128.0,
+      "predicted": 123.5
+    },
+    {
+      "actual": 11.0,
+      "predicted": 53.2
+    },
+    {
+      "actual": 8.0,
+      "predicted": 47.9
+    },
+    {
+      "actual": 8.0,
+      "predicted": 64.8
+    },
+    {
+      "actual": 127.0,
+      "predicted": 138.9
+    },
+    {
+      "actual": 117.0,
+      "predicted": 113.7
+    },
+    {
+      "actual": 4.0,
+      "predicted": 53.4
+    },
+    {
+      "actual": 223.0,
+      "predicted": 87.1
+    },
+    {
+      "actual": 9.0,
+      "predicted": 71.3
+    },
+    {
+      "actual": 9.0,
+      "predicted": 50.2
+    },
+    {
+      "actual": 4.0,
+      "predicted": 16.3
+    },
+    {
+      "actual": 164.0,
+      "predicted": 79.1
+    },
+    {
+      "actual": 98.0,
+      "predicted": 93.3
+    },
+    {
+      "actual": 10.0,
+      "predicted": 51.8
+    },
+    {
+      "actual": 115.0,
+      "predicted": 75.5
+    },
+    {
+      "actual": 169.0,
+      "predicted": 108.6
+    },
+    {
+      "actual": 290.0,
+      "predicted": 154.0
+    },
+    {
+      "actual": 141.0,
+      "predicted": 157.5
+    },
+    {
+      "actual": 97.0,
+      "predicted": 119.7
+    },
+    {
+      "actual": 111.0,
+      "predicted": 118.6
+    },
+    {
+      "actual": 100.0,
+      "predicted": 76.1
+    },
+    {
+      "actual": 108.0,
+      "predicted": 120.5
+    },
+    {
+      "actual": 4.0,
+      "predicted": 66.0
+    },
+    {
+      "actual": 2.0,
+      "predicted": 33.5
+    },
+    {
+      "actual": 107.0,
+      "predicted": 51.8
+    },
+    {
+      "actual": 111.0,
+      "predicted": 58.2
+    },
+    {
+      "actual": 172.0,
+      "predicted": 145.6
+    },
+    {
+      "actual": 96.0,
+      "predicted": 122.9
+    },
+    {
+      "actual": 118.0,
+      "predicted": 138.0
+    },
+    {
+      "actual": 142.0,
+      "predicted": 155.5
+    },
+    {
+      "actual": 99.0,
+      "predicted": 38.8
+    },
+    {
+      "actual": 166.0,
+      "predicted": 30.8
+    },
+    {
+      "actual": 168.0,
+      "predicted": 104.7
+    },
+    {
+      "actual": 119.0,
+      "predicted": 100.2
+    }
+  ],
+  "error_distribution": [
+    {
+      "bin": "[-60m, -30m)",
+      "count": 1193
+    },
+    {
+      "bin": "[-30m, -15m)",
+      "count": 918
+    },
+    {
+      "bin": "[-15m, -5m)",
+      "count": 732
+    },
+    {
+      "bin": "[-5m, 0m)",
+      "count": 447
+    },
+    {
+      "bin": "[0m, 5m)",
+      "count": 473
+    },
+    {
+      "bin": "[5m, 15m)",
+      "count": 1291
+    },
+    {
+      "bin": "[15m, 30m)",
+      "count": 1671
+    },
+    {
+      "bin": "[30m, 60m)",
+      "count": 1240
+    },
+    {
+      "bin": "[60m, 120m)",
+      "count": 877
+    }
+  ],
+  "features": {
+    "numerical": [
+      "distance_km",
+      "num_scheduled_stops",
+      "scheduled_travel_hours",
+      "departure_hour",
+      "month",
+      "day_of_week",
+      "psr_count",
+      "fog_risk_score",
+      "zone_fog_index",
+      "zone_congestion_index",
+      "season_severity_score",
+      "loco_age_years",
+      "coach_age_years",
+      "maintenance_score",
+      "seat_utilisation_pct",
+      "route_historical_ontime_pct",
+      "track_doubled",
+      "is_hdn_route",
+      "is_electrified",
+      "is_circular_route",
+      "is_monsoon_season",
+      "is_fog_risk",
+      "has_lhb_coaches",
+      "is_rake_shared",
+      "is_overloaded",
+      "late_incoming_rake",
+      "is_special_train"
+    ],
+    "categorical": [
+      "train_type",
+      "season",
+      "zone_abbr",
+      "source_station_category",
+      "destination_station_category",
+      "traction_type"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+
+indian-railways-predict-train-delay/ir_train.csv
+indian-railways-predict-train-delay/ir_test.csv
